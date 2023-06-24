@@ -1,2 +1,2 @@
 # lunes
-site for lunes
+site for lunes (https://lunes.host)
