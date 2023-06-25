@@ -51,3 +51,18 @@ window.addEventListener('scroll', () => {
   
 //   lastScrollPosition = currentScrollPosition;
 // });
+
+//--------------------------------------------------------------
+
+const dropcheck = document.getElementById('dropcheck');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+dropcheck.addEventListener('change', function() {
+    if (this.checked) {
+        dropdownContent.classList.add('slide-down');
+        dropdownContent.classList.remove('slide-up');
+    } else {
+        dropdownContent.classList.add('slide-up');
+        dropdownContent.classList.remove('slide-down');
+    }
+});

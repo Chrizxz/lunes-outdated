@@ -1,0 +1,33 @@
+.wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+.footer {
+    height: 10vmin;
+    margin-top: 10vmin;
+    width: 100%;
+    background-color: #040616;
+    color: #dadada;
+    text-align: center;
+    font-size: 2.3vmin;
+    line-height: 10vmin;
+    float: left;
+    /* display: flex;`
+    justify-content: center;
+    align-items: center; */
+    /* position: relative; */
+    bottom:0%;
+}
+
+
+
+/*
+position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+*/
