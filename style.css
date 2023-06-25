@@ -5,7 +5,7 @@ body {
     background-size: cover;
     font-family: 'Roboto', sans-serif; 
     font-weight: 700;
-    color: #dadada;
+    color: #e1e8ed;
     line-height: 20px;
     margin: 0;
     position: relative;
@@ -51,7 +51,7 @@ body {
   }
   
   a {
-    color: #dadada;
+    color: #e1e8ed;
     text-decoration: none;
     transition: color .2s ease-in-out;
   }
@@ -66,8 +66,8 @@ body {
   }
   
   html {
-    --scrollbarBG: #121212;
-    --thumbBG: #cfcfcf;
+    --scrollbarBG: #080A1F;
+    --thumbBG: #e1e8ed;
     scroll-behavior: smooth;
   }
   body::-webkit-scrollbar {
@@ -86,5 +86,5 @@ body {
     border: 3px solid var(--scrollbarBG);
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #0070c0; 
+    background: white; 
   }
