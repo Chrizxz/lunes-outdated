@@ -40,16 +40,20 @@ window.addEventListener('scroll', () => {
 
 const dropcheck = document.getElementById('dropcheck');
 const dropdownContent = document.querySelector('.dropdown-content');
+const hamburger = document.querySelector('.hamburger');
+
 
 dropcheck.addEventListener('change', function() {
     if (this.checked) {
         dropdownContent.classList.add('slide-down');
         dropdownContent.classList.remove('slide-up');
+        hamburger.classList.add('open');
     } else {
         dropdownContent.classList.add('slide-up');
         dropdownContent.classList.remove('slide-down');
+        hamburger.classList.remove('open');
     }
-});
+});  
 
 //--------------------------------------------------------------
 
