@@ -2,9 +2,8 @@
     display: none;
 }
 
-nav ul {
-    list-style: none;
-    padding:0;
+.dropdown-content {
+    display: none;
 }
 
 /* Mobile view */
@@ -170,10 +169,6 @@ nav ul {
 }
 
 /* Desktop View */
-.dropdown-content {
-    display: none;
-}
-
 .desLogo img {
     float: left;
     text-align: left;
@@ -261,10 +256,10 @@ nav ul li a:hover::after,nav ul li a:hover::before{
     border-radius: 15px ;
     transform: translateX(1%);
     background:#131859 ; /* color */
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3) ;
+    /* box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3) ; */
 }
 
 @keyframes slideDown {
     1% {top: -100px;}
-    100% {top: 10px;}
+    100% {top: 1.5%;}
 }

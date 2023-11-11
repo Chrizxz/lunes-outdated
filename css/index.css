@@ -79,8 +79,8 @@
 .moonClouds .moon,
 .moonClouds .cloud1,
 .moonClouds .cloud2 {
-    width: 300px !important; /*20vw*/
-    height: 300px !important; /*20vw*/
+    width: 300px !important;
+    height: 300px !important;
     background-size: contain;
 }
 
@@ -90,11 +90,11 @@
     justify-content: center;
 }
 
-.moonTxt {
-    font-size: 5vw;
+/* .moonTxt {
+    font-size: 90px;
     line-height: 1em;
     color: #e6a400;
-}
+} */
 
 .cloud1 {
     left: 134px !important;
@@ -146,6 +146,12 @@
         align-items: center;
         justify-content: center;
     }
+
+    /* .moonTxt {
+        font-size: 15vw;
+        line-height: 1em;
+        color: #e6a400;
+    } */
 
     .cloud1 {
         left: 14vw !important;
