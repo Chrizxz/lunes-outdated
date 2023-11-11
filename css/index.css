@@ -56,6 +56,60 @@
     display: flex;
 }
 
+.jc-center {
+    justify-content: center;
+}
+
+.posParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posChild {
+    text-align: center;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.moonClouds .moon,
+.moonClouds .cloud1,
+.moonClouds .cloud2 {
+    width: 300px !important; /*20vw*/
+    height: 300px !important; /*20vw*/
+    background-size: contain;
+}
+
+.moon {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.moonTxt {
+    font-size: 5vw;
+    line-height: 1em;
+    color: #e6a400;
+}
+
+.cloud1 {
+    left: 134px !important;
+    top: -19px !important;
+}
+
+.cloud2 {
+    left: -154px !important;
+    top: 77px !important;
+}
+
+.title {
+    margin-top: 100px;
+}
+
 @media only screen and (max-width: 700px) {
     .flex-parent {
         display: block;
@@ -74,20 +128,37 @@
     .witbtn {
         margin: 0;
     }
-}
 
-.jc-center {
-    justify-content: center;
-}
+    .moonClouds .moon,
+    .moonClouds .cloud1,
+    .moonClouds .cloud2 {
+        width: 50vw !important;
+        height: 50vw !important;
+        background-size: contain;
+    }
 
-.posParent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .posChild {
+        margin-top: 30vh;
+    }
 
-.posChild {
-    text-align: center;
-    margin-top: 15vh;
-    margin-bottom: 15vh;
+    .moon {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cloud1 {
+        left: 14vw !important;
+        top: -2vw !important;
+    }
+
+    .cloud2 {
+        left: -16vw !important;
+        top: 8vw !important;
+    }
+
+    .title {
+        margin-top: 10vh;
+        font-size: 22px;
+    }
 }

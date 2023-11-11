@@ -19,11 +19,11 @@ function topFunction() {
 
 //--------------------------------------------------------------
 
-let lastScrollPosition = window.pageYOffset;
+let lastScrollPosition = window.scrollY;
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
-  const currentScrollPosition = window.pageYOffset;
+  const currentScrollPosition = window.scrollY;
   
   if (currentScrollPosition > 50) {
     // Scrolling down
@@ -35,22 +35,6 @@ window.addEventListener('scroll', () => {
   
   lastScrollPosition = currentScrollPosition;
 });
-
-// const nav = document.getElementById('nav');
-
-// window.addEventListener('scroll', () => {
-//   const currentScrollPosition = window.pageYOffset;
-  
-//   if (currentScrollPosition > 50) {
-//     // Scrolling down
-//     nav.classList.add('fixed');
-//   } else {
-//     // Scrolling up
-//     nav.classList.remove('fixed');
-//   }
-  
-//   lastScrollPosition = currentScrollPosition;
-// });
 
 //--------------------------------------------------------------
 
@@ -66,3 +50,8 @@ dropcheck.addEventListener('change', function() {
         dropdownContent.classList.remove('slide-down');
     }
 });
+
+//--------------------------------------------------------------
+
+var parralax = document.getElementById('parallax');
+var parralaxInstance = new Parallax(parallax);

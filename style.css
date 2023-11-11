@@ -1,6 +1,4 @@
 body {
-    /* background: url("./assets/streambg2.png");
-    background-attachment: fixed; */
     background-color: #0a0d27;
     background-size: cover;
     font-family: 'Roboto', sans-serif; 
@@ -67,7 +65,7 @@ body {
   
   html {
     --scrollbarBG: #080A1F;
-    --thumbBG: #e1e8ed;
+    --thumbBG: #1a2265;
     scroll-behavior: smooth;
   }
   body::-webkit-scrollbar {
@@ -86,5 +84,5 @@ body {
     border: 3px solid var(--scrollbarBG);
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: white; 
+    background: #242f8e; 
   }

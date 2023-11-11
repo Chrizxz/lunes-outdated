@@ -14,15 +14,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="./script.js" defer></script>
     <!--CSS/Scripts-->
     
-    <!---Fonts: Roboto-->
+    <!---Fonts: Roboto, Lato-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
         rel="stylesheet"/>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" 
+        rel="stylesheet">
     <!---Fonts-->
     
     <!--Favicon-->
@@ -92,7 +96,7 @@
                         <li><a href="#">Plans</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Panel</a></li>
-                        <li>&nbsp | &nbsp</li>
+                        <li><span>&nbsp | &nbsp</span></li>
                         <li> <a href="https://discord.gg/Bf2FybbKjJ" rel="noopener noreferrer" target="_blank"><i class="fab fa-discord"></i></a> </li>
                         <li> <a href="https://twitter.com/LunesHost" rel="noopener noreferrer" target="_blank"><i class="fab fa-twitter"></i ></a> </li>
                         <li> <a href="https://github.com/Lunes-Hosting" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a> </li>
@@ -110,13 +114,29 @@
         </button>
         <!-- BACK TO TOP BUTTON-->
 
-        <div class="posParent">
-            <div class="posChild">
-                (chriz is so cool)
-            </div>
-        </div>
-        
+        <section id="home">
+            <div class="posParent">
+                <div class="posChild">
+                    <div id="parallax" class="moonClouds">
+                        <div data-depth="0.6" class="cloud1" style="background-image: url(https://media.venox.network/r/lunesClouds.png);"></div>
+                        <div data-depth="0.3" class="moon" style="background-image: url(https://media.venox.network/r/lunesMoon.png);">
+                            <!-- <div class="moonTxt">Lunes</div> -->
+                        </div> 
+                        <div data-depth="0.8" class="cloud2" style="background-image: url(https://media.venox.network/r/lunesClouds.png);"></div>
+                    </div>
 
+                    <h2 class="title">
+                        Lunes Hosting
+                    </h2>
+                    <p1 class="subTitle">
+                        Reliable game hosting at an affordable cost
+                    </p1>
+                </div>
+            </div>
+        </section>
+
+        
+        
 
     </div>
 
