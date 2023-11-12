@@ -1,3 +1,5 @@
+@import url(colors.css);
+
 #myBtn {
     display: none; 
     position: fixed; 
@@ -6,8 +8,8 @@
     z-index: 99; 
     border: none; 
     outline: none; 
-    background-color: #131859; 
-    color: #e1e8ed; 
+    background-color: var(--db3); 
+    color: var(--lb1);
     cursor: pointer; 
     border-radius: 40px; 
     font-size: 18px; 
@@ -20,7 +22,7 @@
   #myBtn:hover {
     background-color: white; 
     color: black; 
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
   }
   
   .btp {

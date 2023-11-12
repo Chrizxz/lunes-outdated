@@ -64,8 +64,8 @@ body {
   }
   
   html {
-    --scrollbarBG: #080A1F;
-    --thumbBG: #1a2265;
+    --scrollbarBG: var(--db4);
+    --thumbBG: var(--db3);
     scroll-behavior: smooth;
   }
   body::-webkit-scrollbar {
@@ -84,5 +84,5 @@ body {
     border: 3px solid var(--scrollbarBG);
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #242f8e; 
+    background: var(--db2); 
   }
