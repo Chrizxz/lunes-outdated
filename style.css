@@ -38,9 +38,10 @@ body {
   }
   
   p1 {
+    font-family: 'Urbanist', sans-serif;
     text-align: center;
     display: block;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 18px;
     margin-left: 70px;
     margin-right: 70px;

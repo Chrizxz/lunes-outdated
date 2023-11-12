@@ -1,3 +1,5 @@
+@import url(colors.css);
+
 .witbtn .whitebttn {
     text-align: center;
     border-radius: 100px;
@@ -38,7 +40,6 @@
     justify-content: center;
     align-items: center;
 }
-
 
 .normbttn {
     color: #333333;
@@ -110,6 +111,10 @@
     margin-top: 100px;
 }
 
+.subTitle {
+    color: var(--lb2);
+}
+
 @media only screen and (max-width: 700px) {
     .flex-parent {
         display: block;
@@ -166,5 +171,9 @@
     .title {
         margin-top: 10vh;
         font-size: 22px;
+    }
+
+    .subTitle {
+        color: var(--lb2)
     }
 }

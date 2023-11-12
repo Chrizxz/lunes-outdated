@@ -25,7 +25,7 @@ const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   const currentScrollPosition = window.scrollY;
   
-  if (currentScrollPosition > 50) {
+  if (currentScrollPosition > 70) {
     // Scrolling down
     navbar.classList.add('fixed');
   } else {
