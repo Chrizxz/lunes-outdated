@@ -53,12 +53,13 @@ body {
   }
   
   a {
+    color: var(--lb1);
     text-decoration: none;
     transition: color .2s ease-in-out;
   }
   
   a:hover {
-    color: var(--lb1)
+    color: white
   }
   
   .last {
