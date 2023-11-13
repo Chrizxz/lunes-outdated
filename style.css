@@ -68,8 +68,8 @@ body {
   }
   
   html {
-    --scrollbarBG: var(--db4);
     --thumbBG: var(--db3);
+    --scrollbarBG: var(--db5);
     scroll-behavior: smooth;
   }
 
