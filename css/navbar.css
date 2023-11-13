@@ -128,7 +128,8 @@
 
     .navTxt {
         font-size: 40%;
-        padding-left:5%
+        padding-left:5%;
+        color: var(--lb1);
     }
 
     .mobileLogoWrap {
@@ -236,6 +237,7 @@
 
 .navTxt2 {
     font-size: 20px;
+    color: var(--lb1);
 }
 
 .links {
