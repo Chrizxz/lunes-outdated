@@ -25,7 +25,7 @@
     }
 
     .dropbtn2 {
-        width: 12.5%;
+        margin-right: 5%;
     }
 
     .clickit {
@@ -293,14 +293,6 @@ nav ul li a {
     line-height: 1;
     font-weight: 400 !important;
 }
-
-nav ul li a::before {
-    left:0;
-}
-
-nav ul li a:hover::after,nav ul li a:hover::before{
-    width: 50%;
-} 
      
 #navbar, #nav {
     position: sticky;
