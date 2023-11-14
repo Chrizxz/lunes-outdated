@@ -67,6 +67,11 @@ body {
     text-align: center;
   }
   
+  ::selection {
+    background: var(--y1);
+    color: black;
+  }
+
   html {
     --thumbBG: var(--db3);
     --scrollbarBG: var(--db5);
