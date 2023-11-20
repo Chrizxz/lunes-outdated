@@ -113,6 +113,40 @@
     margin-top: 100px;
 }
 
+.fly1 {
+    animation: fly1 .7s forwards;
+    opacity: 0;
+    animation-delay: .2s;
+}
+
+.fly2 {
+    animation: fly2 .7s forwards;
+    opacity: 0;
+    animation-delay: .2s;
+}
+
+@keyframes fly1 {
+    0% {
+        /* opacity: 1; */
+        transform: translateX(10vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes fly2 {
+    0% {
+        /* opacity: 1; */
+        transform: translateX(-10vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
 @media only screen and (max-width: 700px) {
     .flex-parent {
         display: block;

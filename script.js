@@ -59,3 +59,17 @@ dropcheck.addEventListener('change', function() {
 
 var parralax = document.getElementById('parallax');
 var parralaxInstance = new Parallax(parallax);
+
+// ---------------------------------------------------------------
+
+const fly1 = document.querySelector('.fly1');
+const fly2 = document.querySelector('.fly2');
+
+function removeClassAfterTime(first, second, time) {
+  setTimeout(() => {
+    fly1.classList.remove(first);
+    fly2.classList.remove(second);
+  }, time);
+}
+
+removeClassAfterTime('fly1', 'fly2', 800);
