@@ -171,7 +171,7 @@ nav {
         display: flex;
     }
 
-    .hamburger {
+    .fries {
         display: block;
         box-sizing: border-box;
         cursor: pointer;
@@ -184,7 +184,7 @@ nav {
     .line {
         width: 20px;
         height: 3px;
-        background-color: white;
+        background-color: var(--text1);
         margin: 2.5px 0;
         transition: 0.4s;
         border-radius: 1vw;
@@ -194,15 +194,15 @@ nav {
         width: 10px !important;
     }
 
-    .hamburger.open .line:nth-child(1) {
+    .fries.open .line:nth-child(1) {
         transform: rotate(-45deg) translate(-5.3px, 6px);
     }
 
-    .hamburger.open .line:nth-child(2) {
+    .fries.open .line:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger.open .line:nth-child(3) {
+    .fries.open .line:nth-child(3) {
         transform: rotate(45deg) translate(-5.3px, -6px);
     }
 }

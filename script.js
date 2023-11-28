@@ -26,10 +26,10 @@ window.addEventListener('scroll', () => {
   const currentScrollPosition = window.scrollY;
   
   if (currentScrollPosition > 70) {
-    // Scrolling down
+    // scrolling down
     navbar.classList.add('fixed');
   } else {
-    // Scrolling up
+    // scrolling up
     navbar.classList.remove('fixed');
   }
   
@@ -40,18 +40,18 @@ window.addEventListener('scroll', () => {
 
 const dropcheck = document.getElementById('dropcheck');
 const dropdownContent = document.querySelector('.dropdown-content');
-const hamburger = document.querySelector('.hamburger');
+const fries = document.querySelector('.fries');
 
 
 dropcheck.addEventListener('change', function() {
     if (this.checked) {
         dropdownContent.classList.add('slide-down');
         dropdownContent.classList.remove('slide-up');
-        hamburger.classList.add('open');
+        fries.classList.add('open');
     } else {
         dropdownContent.classList.add('slide-up');
         dropdownContent.classList.remove('slide-down');
-        hamburger.classList.remove('open');
+        fries.classList.remove('open');
     }
 });  
 
