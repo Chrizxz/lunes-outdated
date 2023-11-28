@@ -1,15 +1,71 @@
+:root.dark-mode {
+    --textHover: #f5f6fc;
+    --text1: #e1e3f7;
+    --lb3: #ccd0f2; 
+    --subTxt: #b8bded;
+    --lb5: #a4abe8;
+    --lb6: #8f98e2;
+    --lb7: #7b85dd;
+    --lb8: #6772d8;
+    --lb9: #5260d3;
+    --lb10: #3e4dce;
+    --db1: #3140c1;
+    --db2: #2c3aad;
+    --db3: #273398;
+    --scrollHover: #222c84;
+    --modal: #1d2570;
+    --modalBlur: rgba(29, 37, 112, 0.7);
+    --db6: #171e5b;
+    --bg: #121847;
+    --scrollBar: #1d2570;
+    --scrollBg: #0d1133;
+    --footerBg: #080a1e;
+    --text2: #03030a;
+    --textSelect: #03030a;
+    --moon1: #ffd983;
+    --moon2: #fdcb4c;
+}
+
 :root {
-    --lb1: #eaebfb;
+    --textHover: #3e4dce;
+    --text1: #273398;
+    --lb3: #ccd0f2; 
+    --subTxt: #5260d3;
+    --lb5: #a4abe8;
+    --lb6: #8f98e2;
+    --lb7: #7b85dd;
+    --lb8: #6772d8;
+    --lb9: #5260d3;
+    --lb10: #3e4dce;
+    --db1: #3140c1;
+    --db2: #2c3aad;
+    --db3: #273398;
+    --scrollHover: #273398;
+    --modal: #e1e3f7;
+    --modalBlur: rgba(225, 227, 247, 0.7);
+    --db6: #171e5b;
+    --bg: #f5f6fc;
+    --scrollBar: #a4abe8;
+    --scrollBg: #ccd0f2;
+    --footerBg: #e1e3f7;
+    --text2: white;
+    --textSelect: #03030a;
+    --moon1: #ffd983;
+    --moon2: #fdcb4c;
+}
+
+/* :root {
+    --textHover: #eaebfb;
     --lb2: #c0c4f2;
     --lb3: #959ce9;
-    --lb4: #6b74e0;
+    --subTxt: #6b74e0;
     --lb5: #414dd8;
     --db1: #2733be;
     --db2: #1f2894;
     --db3: #161d6a;
     --db4: #0d113f;
-    --db5: #0a0d27;
+    --modal: #0a0d27;
     --db6: #040615;
-    --y1: #ffd983;
-    --y2: #fdcb4c;
-}
+    --moon1: #ffd983;
+    --moon2: #fdcb4c;
+} */

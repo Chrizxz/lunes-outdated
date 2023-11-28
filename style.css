@@ -1,11 +1,11 @@
 @import url(./css/colors.css);
 
 body {
-    background-color: var(--db4);
+    background-color: var(--bg);
     background-size: cover;
     font-family: 'Roboto', sans-serif; 
     font-weight: 700;
-    color: var(--lb1);
+    color: var(--text1);
     line-height: 20px;
     margin: 0;
     position: relative;
@@ -22,7 +22,7 @@ body {
     font-weight: 700;
     font-size: 52px;
     font-style: normal;
-    color: var(--lb1);
+    color: var(--text1);
     margin-top: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -33,7 +33,7 @@ body {
     font-weight: 600;
     font-size: 32px;
     font-style: normal;
-    color: var(--lb1);
+    color: var(--text1);
     margin-top: 20px;
     text-align: center;
     margin-bottom: 10px;
@@ -43,7 +43,7 @@ body {
     font-family: 'Urbanist', sans-serif;
     text-align: center;
     display: block;
-    color: var(--lb2);
+    color: var(--subTxt);
     font-weight: 400;
     font-size: 18px;
     margin-left: 70px;
@@ -53,13 +53,13 @@ body {
   }
   
   a {
-    color: var(--lb1);
+    color: var(--text1);
     text-decoration: none;
     transition: color .2s ease-in-out;
   }
   
   a:hover {
-    color: white
+    color: var(--textHover);
   }
   
   .last {
@@ -68,13 +68,13 @@ body {
   }
   
   ::selection {
-    background: var(--y1);
-    color: black;
+    background: var(--moon1);
+    color: var(--textSelect);
   }
 
   html {
-    --thumbBG: var(--db3);
-    --scrollbarBG: var(--db5);
+    --thumbBG: var(--scrollBar);
+    --scrollbarBG: var(--scrollBg);
     scroll-behavior: smooth;
   }
 
@@ -98,5 +98,5 @@ body {
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--db2); 
+    background: var(--scrollHover); 
   }

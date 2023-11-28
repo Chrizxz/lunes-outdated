@@ -1,4 +1,4 @@
-const mybutton = document.getElementById("myBtn");
+const mybutton = document.getElementById("btt");
 
 window.onscroll = function() {
     scrollFunction();
@@ -73,3 +73,41 @@ function removeClassAfterTime(first, second, time) {
 }
 
 removeClassAfterTime('fly1', 'fly2', 800);
+
+// ---------------------------------------------------------------
+
+const modeToggleBtn = document.querySelectorAll('[id^="l-d"]');
+const root = document.documentElement;
+const isLightMode = localStorage.getItem('isLightMode');
+
+function setMode(mode) {
+  if (mode === 'light') {
+    root.classList.remove('dark-mode');
+    localStorage.setItem('isLightMode', 'true');
+  } else {
+    root.classList.add('dark-mode');
+    localStorage.removeItem('isLightMode');
+  }
+}
+
+if (isLightMode) {
+  setMode('light');
+} else { 
+  setMode('dark')
+}
+
+setInterval(function() {
+  const lightMode = localStorage.getItem('isLightMode');
+  if (lightMode) {
+    setMode('light');
+  } else { 
+    setMode('dark')
+  }
+}, 1000);
+
+modeToggleBtn.forEach(button => {
+  button.addEventListener('click', function() {
+    const currentMode = root.classList.contains('dark-mode') ? 'light' : 'dark';
+    setMode(currentMode);
+  })
+});

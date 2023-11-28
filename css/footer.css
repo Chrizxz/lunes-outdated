@@ -9,7 +9,7 @@
     height: auto;
     margin-top: 10vmin;
     width: 100%;
-    background-color: var(--db6);
+    background-color: var(--footerBg);
     display: flex;
     flex-direction: column;
     bottom:0%;
@@ -28,7 +28,7 @@
 }
 
 .footerLeft {
-    color: var(--lb1);
+    color: var(--text1);
     font-size: 14px;
     line-height: 38px;
     font-weight: 400;
@@ -37,6 +37,10 @@
 
 .footerPages {
     padding-bottom: 18px;
+}
+
+.footerPages a {
+    color: var(--text1);
 }
 
 .footerRight {
@@ -57,10 +61,11 @@
 .footerImg {
     width: 30px;
     height: auto;
+    user-select: none;
 }
 
 .footerTxt {
-    color: var(--lb1);
+    color: var(--text1);
     font-size: 30px;
     font-weight: 700;
     padding-left: 10px;
@@ -76,14 +81,32 @@
 .footerSocials a {
     margin-right: 20px;
     line-height: 0;
-    color: var(--lb1);
-    /* padding-left: 10px; */
+    color: var(--text1);
+}
+
+.lightDarkMode {
+    color: var(--subTxt);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.lightDarkMode button {
+    background-color: var(--scrollBg);
+    border-radius: 100%;
+    padding: 0px;
+    border: none;
+    line-height: 0;
+    cursor: pointer;
+    color: var(--text1);
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
 }
 
 .footerTxt2 {
     display: flex;
     justify-content: flex-start;
-    color: var(--lb2);
+    color: var(--subTxt);
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 10px;
@@ -92,7 +115,7 @@
 .footerTxt3 {
     display: flex;
     justify-content: flex-end;
-    color: var(--lb2);
+    color: var(--subTxt);
     font-size: 12px;
     font-weight: 300;
     padding-bottom: 20px;

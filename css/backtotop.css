@@ -1,6 +1,6 @@
 @import url(colors.css);
 
-#myBtn {
+#btt {
     display: none; 
     position: fixed; 
     bottom: 40px; 
@@ -8,24 +8,25 @@
     z-index: 99; 
     border: none; 
     outline: none; 
-    background-color: var(--db3); 
-    color: var(--lb1);
+    background-color: var(--scrollBg); 
+    color: var(--text1);
     cursor: pointer; 
     border-radius: 40px; 
     font-size: 18px; 
     width: 70px; 
     height: 70px;
     text-align: center;
+    user-select: none;
     transition-duration: 0.4s;
   }
   
-  #myBtn:hover {
-    background-color: white; 
-    color: black; 
+  #btt:hover {
+    color: var(--text2); 
+    background-color: var(--textHover); 
     /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
   }
   
-  .btp {
+  .bttIcon {
     display: flex;
     align-items: center;
     justify-content: center;
