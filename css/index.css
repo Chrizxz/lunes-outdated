@@ -77,6 +77,112 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
+    position: relative;
+}
+
+.stars {
+    z-index: -49;
+    position:absolute;
+    top:0;
+    width: 99vw;
+    height: 100vh;
+}
+
+.shooting-star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    animation: shootingStar 3s linear infinite;
+    opacity: 0;
+    z-index: -48 !important;
+    box-shadow: 0 0 0px 3px #ffffff42;
+    top: 1px;
+}
+
+.shooting-star::before {
+    content: '';
+    position: absolute;
+    bottom: 350%;
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(25deg, #ffffffff 10%, #ffffff00 100%);
+    border-radius: 50%;
+    transform:translateY(550%) rotate(-25deg);
+
+}
+
+@keyframes shootingStar {
+    0% {
+        transform: translate(15vw, 5vw);
+        opacity: 0;
+    }
+    45% {
+        transform: translate(-11vw, 20vw);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-11.5vw, 20.5vw);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-12vw, 21vw);
+        opacity: 0;
+    }
+}
+
+.sky {
+    z-index: -50;
+    position:relative;
+    background: linear-gradient(0deg, #21121200 0%, var(--gradient) 100%);
+}
+
+.satellite1 {
+    position:absolute;
+    top: -50px;
+    left: -250px;
+    width: 128px;
+    height: 128px;
+    background-size: contain;
+    animation: satellite1 3.5s ease-in-out infinite;
+}
+
+@keyframes satellite1 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    
+}
+
+.satellite2 {
+    position:absolute;
+    bottom: 130px;
+    right: -250px;
+    width: 128px;
+    height: 128px;
+    background-size: contain;
+    animation: satellite2 3.5s ease-in-out infinite;
+} 
+
+@keyframes satellite2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    
 }
 
 .moonClouds .moon,
@@ -92,12 +198,6 @@
     align-items: center;
     justify-content: center;
 }
-
-/* .moonTxt {
-    font-size: 90px;
-    line-height: 1em;
-    color: #e6a400;
-} */
 
 .cloud1 {
     left: 134px !important;
@@ -127,7 +227,6 @@
 
 @keyframes fly1 {
     0% {
-        /* opacity: 1; */
         transform: translateX(10vw);
     }
     100% {
@@ -138,13 +237,22 @@
 
 @keyframes fly2 {
     0% {
-        /* opacity: 1; */
         transform: translateX(-10vw);
     }
     100% {
         opacity: 1;
         transform: translateX(0vw);
     }
+}
+
+/* .halfCircle {
+    width: 99.4vw;
+} */
+
+.sect2 {
+    background: var(--modal);
+    /* width: 99.4vw; */
+    height: 100vh;
 }
 
 @media only screen and (max-width: 700px) {
@@ -178,17 +286,19 @@
         margin-top: 30vh;
     }
 
+    .satellite1 {
+        display: none;
+    }
+
+    .satellite2 {
+        display: none;
+    }
+
     .moon {
         display: flex !important;
         align-items: center;
         justify-content: center;
     }
-
-    /* .moonTxt {
-        font-size: 15vw;
-        line-height: 1em;
-        color: #e6a400;
-    } */
 
     .cloud1 {
         left: 14vw !important;
@@ -203,5 +313,19 @@
     .title {
         margin-top: 10vh;
         font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .satellite1 {
+        display: none;
+    }
+
+    .satellite2 {
+        display: none;
+    }
+
+    .shooting-star {
+        display: none;
     }
 }

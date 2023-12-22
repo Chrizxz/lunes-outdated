@@ -76,6 +76,61 @@ removeClassAfterTime('fly1', 'fly2', 800);
 
 // ---------------------------------------------------------------
 
+const starCoordinates = [
+  { x: '15%', y: '5%' },
+  { x: '15%', y: '30%' },
+  { x: '30%', y: '50%' },
+  { x: '40%', y: '60%' },
+  { x: '80%', y: '30%' },
+  { x: '70%', y: '60%' },
+  { x: '70%', y: '15%' },
+  { x: '75%', y: '10%' },
+  { x: '75%', y: '60%' }
+];
+
+function getPixelCoordinate(coordinate, axis) {
+  if (coordinate.includes('%')) {
+    const percent = parseFloat(coordinate);
+    const viewportSize = axis === 'x' ? window.innerWidth : window.innerHeight;
+    return (percent / 100) * viewportSize;
+  }
+  return parseFloat(coordinate);
+}
+
+function getRandomCoordinate() {
+  const randomIndex = Math.floor(Math.random() * starCoordinates.length);
+  return starCoordinates[randomIndex];
+}
+
+function createShootingStar() {
+  const star = document.createElement('div');
+  star.classList.add('shooting-star');
+  document.body.appendChild(star);
+
+  const { x, y } = getRandomCoordinate();
+  const animationDuration = 3;
+  const pixelX = getPixelCoordinate(x, 'x');
+  const pixelY = getPixelCoordinate(y, 'y');
+
+  star.style.animationDuration = `${animationDuration}s`;
+  star.style.zIndex = -48;
+  star.style.left = `${pixelX}px`;
+  star.style.top = `${pixelY}px`;
+
+
+  setTimeout(() => {
+    star.remove(); 
+  }, animationDuration * 1000); 
+
+  const endX = Math.random() * window.innerWidth;
+  const endY = Math.random() * window.innerHeight;
+  star.style.transform = `translate(${endX}px, ${endY}px)`;
+}
+
+setInterval(createShootingStar, 1000);
+
+// ---------------------------------------------------------------
+
 const modeToggleBtn = document.querySelectorAll('[id^="l-d"]');
 const root = document.documentElement;
 const isLightMode = localStorage.getItem('isLightMode');

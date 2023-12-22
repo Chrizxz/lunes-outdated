@@ -1,4 +1,8 @@
 :root.dark-mode {
+    --gradient: #273398;
+    --navTxtHover: #f5f6fc;
+    --navTxt1: #e1e3f7;
+    --navSubTxt: #b8bded;
     --textHover: #f5f6fc;
     --text1: #e1e3f7;
     --lb3: #ccd0f2; 
@@ -27,6 +31,10 @@
 }
 
 :root {
+    --gradient: #273398;;
+    --navTxtHover: #f5f6fc;
+    --navTxt1: #e1e3f7;
+    --navSubTxt: #b8bded;
     --textHover: #3e4dce;
     --text1: #273398;
     --lb3: #ccd0f2; 
