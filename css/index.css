@@ -81,7 +81,7 @@
 }
 
 .stars {
-    z-index: -49;
+    z-index: 1;
     position:absolute;
     top:0;
     width: 99vw;
@@ -96,7 +96,7 @@
     border-radius: 50%;
     animation: shootingStar 3s linear infinite;
     opacity: 0;
-    z-index: -48 !important;
+    z-index: 2;
     box-shadow: 0 0 0px 3px #ffffff42;
     top: 1px;
 }
@@ -134,9 +134,8 @@
 }
 
 .sky {
-    z-index: -50;
-    position:relative;
-    background: linear-gradient(0deg, #21121200 0%, var(--gradient) 100%);
+    position: relative;
+    background: linear-gradient(0deg, #ffffff00 0%, var(--gradient) 100%);
 }
 
 .satellite1 {
@@ -147,6 +146,7 @@
     height: 128px;
     background-size: contain;
     animation: satellite1 3.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 60px var(--dropShadow));
 }
 
 @keyframes satellite1 {
@@ -170,6 +170,7 @@
     height: 128px;
     background-size: contain;
     animation: satellite2 3.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 60px var(--dropShadow));
 } 
 
 @keyframes satellite2 {
@@ -183,6 +184,10 @@
         transform: translateY(0);
     }
     
+}
+
+.logo {
+    z-index: 2;
 }
 
 .moonClouds .moon,
@@ -245,13 +250,8 @@
     }
 }
 
-/* .halfCircle {
-    width: 99.4vw;
-} */
-
 .sect2 {
     background: var(--modal);
-    /* width: 99.4vw; */
     height: 100vh;
 }
 

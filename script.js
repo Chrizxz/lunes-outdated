@@ -113,7 +113,7 @@ function createShootingStar() {
   const pixelY = getPixelCoordinate(y, 'y');
 
   star.style.animationDuration = `${animationDuration}s`;
-  star.style.zIndex = -48;
+  star.style.zIndex = 1;
   star.style.left = `${pixelX}px`;
   star.style.top = `${pixelY}px`;
 
