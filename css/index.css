@@ -70,8 +70,6 @@
 
 .posChild {
     text-align: center;
-    /* margin-top: 15vh;
-    margin-bottom: 15vh; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -134,8 +132,10 @@
 }
 
 .sky {
-    position: relative;
-    background: linear-gradient(0deg, #ffffff00 0%, var(--gradient) 100%);
+    background: linear-gradient(0deg, var(--nightBottom) 0%, var(--nightTop) 100%);
+    width: 99.25vw;
+    height: 100vh;
+    position: absolute;
 }
 
 .satellite1 {
@@ -250,9 +250,36 @@
     }
 }
 
-.sect2 {
-    background: var(--modal);
+.cls-1 {
+    fill: var(--section);
+}
+
+.body1 {
+    background: var(--section);
     height: 100vh;
+}
+
+.craters {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.crater {
+    height: 200px;
+    width: 200px;
+    padding: 50px;
+    text-align: center;
+    background-color: var(--crater);
+    border-radius: 50%;
+    box-shadow: inset 15px 15px 0px 15px var(--crater);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.crater:nth-child(2) {
+    transform: translateY(-50px);
 }
 
 @media only screen and (max-width: 700px) {
@@ -313,6 +340,31 @@
     .title {
         margin-top: 10vh;
         font-size: 22px;
+    }
+
+    .craters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .crater {
+        height: 20vh;
+        width: 20vh;
+        padding: 25px;
+        box-shadow: inset 3vh 3vh 0 3vh var(--crater);
+        margin: 10px;
+    }
+
+    .crater p2 {
+        font-size: 14px;
+    }
+
+    .crater h3 {
+        font-size: 18px;
+    }
+
+    .crater:nth-child(2) {
+        transform: translateY(0px);
     }
 }
 

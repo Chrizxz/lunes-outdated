@@ -7,7 +7,7 @@
 
 .footer {
     height: auto;
-    margin-top: 10vmin;
+    /* margin-top: 10vmin; */
     width: 100%;
     background-color: var(--footerBg);
     display: flex;

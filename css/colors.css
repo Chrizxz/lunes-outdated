@@ -1,13 +1,17 @@
 :root.dark-mode {
-    --gradient: #273298;
+    --nightTop: #121847;
+    --nightBottom: #273298;
     --dropShadow: #273298c4;
     --navTxtHover: #f5f6fc;
     --navTxt1: #e1e3f7;
     --navSubTxt: #b8bded;
-    --textHover: #f5f6fc;
-    --text1: #e1e3f7;
+    --textHover: hsl(231, 54%, 97%);
+    --text1: #f5f6fc;
+    --text2: #ccd0f2;
     --lb3: #ccd0f2; 
     --subTxt: #b8bded;
+    --section: #182061;
+    --crater: #1218474b;
     --lb5: #a4abe8;
     --lb6: #8f98e2;
     --lb7: #7b85dd;
@@ -21,26 +25,29 @@
     --modal: #1d2570;
     --modalBlur: rgba(29, 37, 112, 0.7);
     --db6: #171e5b;
-    --bg: #121847;
+    --bg: #273298; /*Old: 121847*/
     --scrollBar: #1d2570;
     --scrollBg: #0d1133;
     --footerBg: #080a1e;
-    --text2: #03030a;
     --textSelect: #03030a;
     --moon1: #ffd983;
     --moon2: #fdcb4c;
 }
 
 :root {
-    --gradient: #273298;
+    --nightTop: #273298;
+    --nightBottom: #27329800;
     --dropShadow: #273298c4;
     --navTxtHover: #f5f6fc;
     --navTxt1: #e1e3f7;
     --navSubTxt: #b8bded;
     --textHover: #3e4dce;
     --text1: #273398;
+    --text2: #3140c1;
     --lb3: #ccd0f2; 
     --subTxt: #5260d3;
+    --section: #ecedfa;
+    --crater: hsla(234, 60%, 78%, 0.12);
     --lb5: #a4abe8;
     --lb6: #8f98e2;
     --lb7: #7b85dd;
@@ -51,14 +58,13 @@
     --db2: #2c3aad;
     --db3: #273398;
     --scrollHover: #273398;
-    --modal: #e1e3f7;
+    --modal: #f5f6fc;
     --modalBlur: rgba(225, 227, 247, 0.7);
     --db6: #171e5b;
-    --bg: #f5f6fc;
+    --bg: white;
     --scrollBar: #a4abe8;
     --scrollBg: #ccd0f2;
     --footerBg: #e1e3f7;
-    --text2: white;
     --textSelect: #03030a;
     --moon1: #ffd983;
     --moon2: #fdcb4c;
