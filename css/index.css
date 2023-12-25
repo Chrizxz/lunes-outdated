@@ -133,7 +133,7 @@
 
 .sky {
     background: linear-gradient(0deg, var(--nightBottom) 0%, var(--nightTop) 100%);
-    width: 99.25vw;
+    width: 100vw;
     height: 100vh;
     position: absolute;
 }
@@ -312,6 +312,7 @@
     .posChild {
         margin-top: 30vh;
     }
+
 
     .satellite1 {
         display: none;
