@@ -21,17 +21,22 @@
     --db1: #3140c1;
     --db2: #2c3aad;
     --db3: #273398;
-    --scrollHover: #222c84;
     --modal: #1d2570;
     --modalBlur: rgba(29, 37, 112, 0.7);
     --db6: #171e5b;
     --bg: #273298; /*Old: 121847*/
-    --scrollBar: #1d2570;
+    --bttIn1:#f5f6fc;
+    --bttOut1:#0d1133;
+    --bttIn2:#0d1133;
+    --bttOut2:#e1e3f7;
+    --scrollBar: #222c84;
     --scrollBg: #0d1133;
+    --scrollHover: #e1e3f7;
     --footerBg: #080a1e;
     --textSelect: #03030a;
     --moon1: #ffd983;
     --moon2: #fdcb4c;
+    --cloud: url(../assets/lunesDarkCloud.svg);
 }
 
 :root {
@@ -57,17 +62,22 @@
     --db1: #3140c1;
     --db2: #2c3aad;
     --db3: #273398;
-    --scrollHover: #273398;
     --modal: #f5f6fc;
     --modalBlur: rgba(225, 227, 247, 0.7);
     --db6: #171e5b;
     --bg: white;
+    --bttIn1:#273398;
+    --bttOut1:#ccd0f2;
+    --bttIn2:#ccd0f2;
+    --bttOut2:#273398;
     --scrollBar: #a4abe8;
     --scrollBg: #ccd0f2;
     --footerBg: #e1e3f7;
+    --scrollHover: #273398;
     --textSelect: #03030a;
     --moon1: #ffd983;
     --moon2: #fdcb4c;
+    --cloud: url(../assets/lunesLightCloud.svg);
 }
 
 /* :root {

@@ -14,6 +14,8 @@
     <link href="https://file.myfontastic.com/5Rye3JbqszJpTmQUpnavVP/icons.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="./script.js" defer></script>
@@ -47,11 +49,10 @@
     <meta property="og:image" content="https://media.venox.network/r/lunes.png">
     <meta property="og:description" content="Super cheap and reliable hosting.">
     <meta name="description" content="Super cheap and reliable hosting.">
-    <meta name="og:url" content="https://venox.network">
+    <meta property="og:url" content="https://venox.network">
     <meta name="theme-color" content="#fbcf59">
     <meta property="og:image:width" content="627">
     <meta property="og:image:height" content="627">
-    <!-- <link type="application/json+oembed" href="https://paste.chriz.cf/raw/unopakivuh"> -->
     <meta name="keywords" content="hosting, bots, lunes">
     <meta name="author" content="ChrizxzFTW">
     <!--Meta Data-->
@@ -126,7 +127,7 @@
         </nav>
 
         <!-- BACK TO TOP BUTTON-->
-        <button onclick="topFunction()" id="btt" title="Back To Top"> 
+        <button onclick="backToTop()" id="btt" title="Back To Top"> 
             <div class="bttIcon">
                 <i class="fas fa-caret-up fa-2x"></i><br><br> 
             </div>
@@ -142,20 +143,19 @@
                     <div class="satellite2" style="background-image: url(./assets/lunesSatelliteRight.png);"></div>
                     <div id="parallax" class="moonClouds">
                         <div data-depth="0.8" class="cloud1 fly1" style="background-image: url(./assets/lunesClouds.png);"></div>
-                        <div data-depth="0.3" class="moon" style="background-image: url(./assets/lunesMoon.png);">
-                        </div> 
+                        <div data-depth="0.3" class="moon" style="background-image: url(./assets/lunesMoon.png);"></div> 
                         <div data-depth="1" class="cloud2 fly2" style="background-image: url(./assets/lunesClouds.png);"></div>
                     </div>
                     <h2 class="title">
                         Lunes Hosting
                     </h2>
-                    <p1 class="subTitle">
+                    <p1>
                         Reliable game hosting at an affordable cost.
                     </p1>
                 </div>
             </div>
         </section>
-        
+
         <!-- Separator -->
         <div class="halfCircle" style="transform: translateY(10px);">
             <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1924 210.09">
@@ -165,25 +165,82 @@
                 </g>
             </svg>
         </div>
+
         <!-- Body -->
         <div class="body1">
-            <section id="info">
+
+            <!-- Info -->
+            <section id="info" class="reveal type">
+                <h2>Why Lunes<div id="typingEffect"></div></h2>
                 <div class="craters">
                     <div class="crater">
-                        <h3>Reliable</h3>
-                        <p2>Our servers are hosted on the best hardware available, ensuring that your server will always be online.</p2>
+                        <h4>Reliable</h4>
+                        <p2>Our servers are hosted on the best hardware available, ensuring that your server will maintain optimal performance.</p2>
                     </div>
                     <div class="crater">
-                        <h3>Affordable</h3>
+                        <h4>Affordable</h4>
                         <p2>Our market-leading prices come with an advanced referral system, offering a <b style="color: var(--text2);">free</b> premium server, no payment details required.</p2>
                     </div>
                     <div class="crater">
-                        <h3>Trust<span style="color:var(--text2)">"</span>able<span style="color:var(--text2)">"</span></h3>
+                        <h4>Trust<span style="color:var(--text2)">"</span>able<span style="color:var(--text2)">"</span></h4>
                         <p2>We are trusted by over 1500 users and have been in the hosting business for over a year.</p2>
                     </div>
                 </div>
             </section>
-            <section id="compare"></section>
+
+            <div class="space"></div>
+
+            <!-- Hosts -->
+            <section id="hosts" class="reveal">  
+                <div class="hostsWrap">
+                    <div>
+                        <h2>What we <span class="hostTxtCustom">host<div></div></span></h2>
+                        <p2>We offer a variety of servers with a range of options, all easily accessible through our simple interface. No more complicated terminals.</p2>
+                    </div>
+                    <div class="hostSpace"></div>
+                    <div class="slides">
+                        <div class="swiper-bg"></div>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h2>Minecraft</h2>
+                                    <p2>Spigot, Purpur, Forge, Vanilla</p2>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h2>Discord Bots</h2>
+                                    <p2>Python, NodeJS, GO, JAVA</p2>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h2>Web Hosting</h2>
+                                    <p2>Nginx, All language frameworks</p2>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h2>Game Servers</h2>
+                                    <p2>CS:GO, Garry's Mod, Rust, ARK, Team Fortress 2</p2>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h2>Databases</h2>
+                                    <p2>MongoDB, PolygonDB, Redis, MySQL</p2>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="space"></div>
+
+            <!-- Compare -->
+            <section id="compare">
+                <h2>Lunes&nbsp;<span class="compTxtCustom">VS <span class="compSlash"><span></span></span></span>&nbsp;Everyone</h2>
+            </section>
+
+            <div class="space"></div>
+
+
         </div>
         
 

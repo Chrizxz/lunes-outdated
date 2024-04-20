@@ -11,7 +11,7 @@ body {
     height: 100%;
     padding: 0;
     overflow-x: hidden;
-  }
+}
   
   .container {
     min-height: 100vh;
@@ -27,9 +27,21 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
-  
+
   h2 {
     font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    font-style: normal;
+    line-height: 50px;
+    color: var(--text1);
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 600;
     font-size: 32px;
     font-style: normal;
@@ -39,7 +51,7 @@ body {
     margin-bottom: 10px;
   }
   
-  h3 {
+  h4 {
     font-family: 'Urbanist', sans-serif;
     font-weight: 400;
     font-size: 20px;
@@ -90,6 +102,19 @@ body {
   ::selection {
     background: var(--moon1);
     color: var(--textSelect);
+  }
+
+  @media only screen and (max-width: 700px) {
+    h2 {
+      font-size: 32px;
+      line-height: 20px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    h4 {
+      font-size: 16px;
+    }
   }
 
   html {

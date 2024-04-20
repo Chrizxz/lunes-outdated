@@ -1,42 +1,78 @@
-const mybutton = document.getElementById("btt");
-
-window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
-//--------------------------------------------------------------
-
-let lastScrollPosition = window.scrollY;
+const backToTopButton = document.getElementById("btt");
+// let lastScrollPosition = window.scrollY;
 const navbar = document.getElementById('navbar');
+const revealElements = document.querySelectorAll('.reveal');
 
 window.addEventListener('scroll', () => {
-  const currentScrollPosition = window.scrollY;
-  
-  if (currentScrollPosition > 70) {
-    // scrolling down
-    navbar.classList.add('fixed');
-  } else {
-    // scrolling up
-    navbar.classList.remove('fixed');
+  window.addEventListener('scroll', () => {
+  for (const element of revealElements) {
+    if (element.getBoundingClientRect().top < window.innerHeight - 300) {
+      if (!element.classList.contains("active")) {
+        element.classList.add("active");
+        typeWriter();
+      }
+    }
   }
-  
-  lastScrollPosition = currentScrollPosition;
+});
+  // when they scroll down 20px from the top
+  if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+      backToTopButton.style.display = "block";
+  } else {
+      backToTopButton.style.display = "none";
+  }
+  // scrolling down
+  if (window.scrollY > 50) {
+      navbar.classList.add('fixed');
+      // if (middleLogo) middleLogo.style.visibility = "visible";
+      return;
+  }
+  // scrolling up
+  navbar.classList.remove('fixed');
+  // if (middleLogo) middleLogo.style.visibility = "hidden";
 });
 
+function backToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 //--------------------------------------------------------------
+
+const text = "??????";
+const typingSpeed = 150;
+let charIndex = 0;
+
+function typeWriter() {
+  const typingDiv = document.getElementById('typingEffect');
+  if (charIndex < text.length) {
+    typingDiv.innerHTML += text.charAt(charIndex);
+    charIndex++;
+    setTimeout(typeWriter, typingSpeed);
+  }
+}
+
+
+//--------------------------------------------------------------
+
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  autoplay: {
+    delay: 2250,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+// ---------------------------------------------------------------
 
 const dropcheck = document.getElementById('dropcheck');
 const dropdownContent = document.querySelector('.dropdown-content');
