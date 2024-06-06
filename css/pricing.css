@@ -1,0 +1,538 @@
+@import url(colors.css);
+
+/* Desktop Viewports */
+
+.pgMoonWrap {
+    display:flex;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.pgMoon {
+    margin-top: 2rem;
+    background: url(../assets/lunesMoonOutline.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30rem;
+    height: 30rem;
+    opacity: .3;
+    z-index: -1;
+}
+
+.space {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+.indent {
+    display: none;
+}
+
+.gradTxt {
+    background: radial-gradient(var(--moonLight) 0%, var(--moon2) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.comeUp {
+    animation: comeUp .2s ease-in-out forwards;
+    animation-delay: .2s;
+    opacity: 0;
+}
+
+@keyframes comeUp {
+    from {
+        transform: translateY(6rem) scale(1);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.plansParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-delay: .5s !important;
+    margin-top: 7rem;
+}
+
+.plansChild {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.plansBaby {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.plan {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 14.5rem;
+    height: 23rem;
+    background-color: var(--block);
+    border-radius: 1rem;
+    border: .1rem solid var(--blockOutline);
+    margin: 1rem;
+    position: relative;
+}
+
+.plan::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    width: 12.5rem;
+    height: 23rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    background: linear-gradient(0deg, transparent 0%, var(--greyMoon2) 100%);
+    z-index: -2;
+}
+
+.freePlan::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    width: 12.5rem;
+    height: 23rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    background: linear-gradient(0deg, transparent 0%, var(--moon) 100%) !important;
+    z-index: -2;
+}
+
+.freePlan::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    border-radius: 0rem;
+    width: 17.5rem;
+    height: 25rem;
+    filter: blur(1rem);
+    background-color: var(--moon2);
+    opacity: .9;
+    z-index: -1;
+}
+
+.plan > h4 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--subTxt);
+    text-align: left;
+    margin: 0px;
+}
+
+.plan > h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 2.3rem;
+    color: var(--text);
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+}
+
+.plan > h2 > i {
+    font-size: 1.5rem;
+    color: var(--greyMoon);
+    margin-bottom:.7rem;
+}
+
+.freePlan > h2 > i {
+    color: var(--moon);
+}
+
+.plan > h2 > p3 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    color: var(--subTxt) !important;
+    font-size: 1.5rem;
+    line-height: 1.3rem;
+}
+
+.sepWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sepL {
+    width: 40%;
+    height: .1rem;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--separator) 0%, var(--greyMoon) 100%);
+}
+
+.sepM {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    box-shadow: inset 0 0 1rem var(--greyMoon);
+    background: var(--greyMoon);
+    box-shadow: inset .25rem .25rem 0px var(--greyMoon2);
+    transform: rotate(-45deg);
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.sepR {
+    width: 40%;
+    height: .1rem;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--greyMoon) 0%, var(--separator) 100%);
+}
+
+.freePlanSepL {
+    background: linear-gradient(90deg, var(--separator) 0%, var(--moon) 100%) !important;
+}
+
+.freePlanSepM {
+    box-shadow: inset 0 0 1rem var(--moon) !important;
+    background: var(--moon) !important;
+    box-shadow: inset .25rem .25rem 0px var(--moon3) !important;
+}
+
+.freePlanSepR {
+    background: linear-gradient(90deg, var(--moon) 0%, var(--separator) 100%) !important;
+}
+
+.plan > p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text);
+    margin: 0;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.plan > p > i {
+    color: var(--greyMoon);
+}
+
+.freePlan > p > i {
+    color: var(--moon);
+}
+
+.planBttnWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.planBttn {
+    text-align: center;
+    border-radius: 5rem;
+    border: .2rem solid;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    transition: background-color 0.2s ease-out, transform 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.freePlanBttn {
+    color: var(--moonDark);
+    background-color: var(--moon);
+    z-index: 2;
+    transition: 0.1s ease-in;
+    border: none;
+}
+
+.freePlanBttn:hover {
+    color: var(--moonDark);
+    opacity: .75;
+}
+
+.normPlanBttn {
+    color: var(--block);
+    background-color: var(--greyMoon);
+    z-index: 2;
+    transition: 0.1s ease-in;
+    border: none;
+}
+
+.normPlanBttn:hover {
+    color: var(--block);
+    opacity: .75;
+}
+
+#features > .comeUp {
+    animation-delay: .5s;
+}
+
+.featParent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.plansTitle > br {
+    display: none;
+}
+
+.featChild {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    width: 35rem;
+    height: 35rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background: var(--bgOrbit);
+}
+
+.feature {
+    background-color: var(--block);
+    border-radius: 1rem;
+    border: .1rem solid var(--blockOutline);
+    padding: 2rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature > p1, .feature > h3 {
+    margin: 0;
+}
+
+.featSep {
+    width: 2px;
+    height: 100%;
+    background-color: var(--separator);
+    margin: 1rem;
+}
+
+.featIconWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.featIconL {
+    background: var(--rocket);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 10rem;
+    opacity: .1;
+    transform: rotate(-45deg);
+}
+
+.featIconR {
+    background: var(--uranus);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 10rem;
+    opacity: .1;
+}
+
+.bottomMoonWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.bottomMoon {
+    background: url(../assets/lunesMoon.svg);
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+    width: 60rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottomMoon > h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 4rem;
+    color: var(--moonDark);
+    margin-top: 3rem;
+    margin-bottom: .5rem;
+}
+
+.bottomMoon > p1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--moonDark);
+    margin: 0;
+    margin-bottom: .5rem;
+}
+
+.moonBttn {
+    color: var(--moonDark);
+    border-color: var(--moonDark);
+    z-index: 2;
+    transition: 0.1s ease-in !important;
+}
+
+.moonBttn:hover {
+    color: #f5f6fc;
+    border-color: var(--moonDark);
+}
+
+.moonBttn::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0%;
+    right:100%;
+    bottom:0;
+    background: var(--moonDark);
+    z-index: -1;
+    transition: right 0.1s ease-in;
+}
+
+.moonBttn:hover::before {
+    right:50%;
+}
+
+.moonBttn::after {
+    content: "";
+    position: absolute;
+    top:0;
+    left:100%;
+    right:0;
+    bottom:0;
+    background: var(--moonDark);
+    z-index: -1;
+    transition: left 0.1s ease-in;
+}
+
+.moonBttn:hover::after {
+    left:50%;
+}
+
+/* Mobile Viewports */
+
+@media screen and (max-width: 1030px) {
+    .plansChild {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pgMoon {
+        margin-top: 5rem;
+    }
+
+    .indent {
+        display: block;
+    }
+
+    .featIconWrap {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .plansBaby {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pgMoon {
+        margin-top: 10rem !important;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .plansTitle {
+        font-size: 42px;
+        line-height: 42px;
+    }
+
+    .plansParent {
+        margin-top: 3rem;
+    }
+
+    .indent {
+        display: none;
+    }
+
+    .featParent {
+        margin-top: 7rem;
+    }
+
+    .plansTitle > br {
+        display: block;
+    }
+
+    .featChild {
+        background-size: cover !important;
+        margin: 0;
+    }
+
+    .bottomMoon {
+        height: 15rem;
+    } 
+
+    .bottomMoon > h2 {
+        line-height: 3rem;
+        font-size: 2.7rem;
+    }
+
+    .bottomMoon > p1 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+}
