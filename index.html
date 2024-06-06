@@ -12,16 +12,18 @@
     <link rel="stylesheet" href="./css/backtotop.css">
     <link rel="stylesheet" href="./css/colors.css">
     <link href="https://file.myfontastic.com/5Rye3JbqszJpTmQUpnavVP/icons.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/> -->
+    <link href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="./script.js" defer></script>
+    <script src="./js/home.js" defer></script>
     <!--CSS/Scripts-->
     
-    <!---Fonts: Roboto, Lato, Urbanist-->
+    <!---Fonts: Roboto, Lato, Urbanist, Poppins-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -32,6 +34,9 @@
         rel="stylesheet">
     <link 
         href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
         rel="stylesheet">
     <!---Fonts-->
     
@@ -55,6 +60,7 @@
     <meta property="og:image:height" content="627">
     <meta name="keywords" content="hosting, bots, lunes">
     <meta name="author" content="ChrizxzFTW">
+    <meta name="darkreader-lock">
     <!--Meta Data-->
     
     <!--Title-->
@@ -63,7 +69,18 @@
     
 </head>
 
+
 <body>
+
+    <style>
+        body {
+            background-color: var(--bg);
+        }
+
+        .footer {
+            background-color: transparent;
+        }
+    </style>
     
     <div class="container">
         
@@ -95,9 +112,10 @@
                     </div>
                 </h1>
                 <div class="dropdown-content">
-                    <a href="#">Plans</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Panel</a>
+                    <a href="./pricing">Pricing</a>
+                    <a href="./careers">Careers</a>
+                    <a href="https://betadash.lunes.host">Panel</a>
+                    <a><button id="l-d">Light/Dark Mode &nbsp;<i class="fa-solid fa-circle-half-stroke"></i></button></a>
                     <a class="icons" href="https://discord.gg/Bf2FybbKjJ" rel="noopener noreferrer" target="_blank"><i class="fab fa-discord"></i></a>
                     <a class="icons" href="https://twitter.com/LunesHost" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
                     <a class="icons" href="https://github.com/Lunes-Hosting" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
@@ -113,14 +131,15 @@
                         </div>
                     </a>
                     <div>
-                        <li><a href="#">Plans</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Panel</a></li>
-                        <li><span class="separator" style="user-select: none;">&nbsp | &nbsp</span></li>
+                        <li><a href="./pricing">Pricing</a></li>
+                        <li><a href="./careers">Careers</a></li>
+                        <li><a href="https://betadash.lunes.host">Panel</a></li>
+                        <li><span class="separator" style="user-select: none;">|</span></li>
                         <li><a href="https://discord.gg/Bf2FybbKjJ" rel="noopener noreferrer" target="_blank"><i class="fab fa-discord"></i></a></li>
                         <li><a href="https://twitter.com/LunesHost" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i ></a></li>
                         <li><a href="https://github.com/Lunes-Hosting" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a></li>
-                        <span style="user-select: none;">&nbsp &nbsp &nbsp</span>
+                        <li><span class="separator" style="user-select: none;">|</span></li>
+                        <li><button id="l-d" class="ldMode"><i class="fa-solid fa-circle-half-stroke"></i></button></li>
                     </div>
                 </ul>
             </div>
@@ -134,8 +153,8 @@
         </button>
         <!-- BACK TO TOP BUTTON-->
         
-        <!-- Home -->
-        <section id="home">
+        <!-- Landing -->
+        <section id="landing">
             <div class="posParent">
                 <div class="shooting-star"></div>
                 <div class="posChild logo">
@@ -152,12 +171,16 @@
                     <p1>
                         Reliable game hosting at an affordable cost.
                     </p1>
+                    <div class="bttnWrap bttnTitleWrap">
+                        <a href="./pricing" class="bttn titleBttn" rel="noopener noreferrer">SEE PLANS</a>
+                        <a href="https://betadash.lunes.host" class="bttn titleBttn" rel="noopener noreferrer">GET STARTED</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Separator -->
-        <div class="halfCircle" style="transform: translateY(10px);">
+        <div class="sep">
             <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1924 210.09">
                 <!-- <defs><style></style></defs> -->
                 <g id="Layer_3">
@@ -172,29 +195,41 @@
             <!-- Info -->
             <section id="info" class="reveal type">
                 <h2>Why Lunes<div id="typingEffect"></div></h2>
-                <div class="craters">
-                    <div class="crater">
-                        <h4>Reliable</h4>
-                        <p2>Our servers are hosted on the best hardware available, ensuring that your server will maintain optimal performance.</p2>
+                <div class="planets">
+                    <div class="planetWrap">
+                        <span class="orbitMoon"></span>
+                        <div class="planet">
+                            <span class="orbitRing"></span>
+                            <h4>Reliable</h4>
+                            <p2>Our servers are hosted on the best hardware available, ensuring that your server will maintain optimal performance.</p2>
+                        </div>
                     </div>
-                    <div class="crater">
-                        <h4>Affordable</h4>
-                        <p2>Our market-leading prices come with an advanced referral system, offering a <b style="color: var(--text2);">free</b> premium server, no payment details required.</p2>
+                    <div class="planetWrap">
+                        <span class="orbitMoon moonMiddle"></span>
+                        <div class="planet planetMid">
+                            <span class="orbitRing"></span>
+                            <h4>Affordable</h4>
+                            <p2>Our market-leading prices come with an advanced referral system, offering a <b style="color: var(--text2);">free</b> premium server, no payment details required.</p2>
+                        </div>
                     </div>
-                    <div class="crater">
-                        <h4>Trust<span style="color:var(--text2)">"</span>able<span style="color:var(--text2)">"</span></h4>
-                        <p2>We are trusted by over 1500 users and have been in the hosting business for over a year.</p2>
+                    <div class="planetWrap">
+                        <span class="orbitMoon moonLast"></span>
+                        <div class="planet planetLast">
+                            <span class="orbitRing"></span>
+                            <h4>Trust<span style="color:var(--text2)">"</span>able<span style="color:var(--text2)">"</span></h4>
+                            <p2>We are trusted by over 1500 users and have been in the hosting business for over a year.</p2>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <div class="space"></div>
+            <div class="space" style="height: 130px;"></div>
 
             <!-- Hosts -->
-            <section id="hosts" class="reveal">  
-                <div class="hostsWrap">
+            <section id="hosts" class="reveal">
+                <div class="hostWrap">
                     <div>
-                        <h2>What we <span class="hostTxtCustom">host<div></div></span></h2>
+                        <h2><span class="hostTitle">What we </span><span class="hostTxtCustom">host<div></div></span></h2>
                         <p2>We offer a variety of servers with a range of options, all easily accessible through our simple interface. No more complicated terminals.</p2>
                     </div>
                     <div class="hostSpace"></div>
@@ -234,79 +269,248 @@
             <div class="space"></div>
 
             <!-- Compare -->
-            <section id="compare">
+            <section id="compare" class="reveal">
                 <h2>Lunes&nbsp;<span class="compTxtCustom">VS <span class="compSlash"><span></span></span></span>&nbsp;Everyone</h2>
-            </section>
 
+                <!--Compare Desktop-->
+                <div class="compGridWrap">
+                    <div class="compCell"></div>
+                    <div class="compCell gridHeader colHl"><div class="lunesLetterLogo"></div></div> <!--(8:3)-->
+                    <div class="compCell gridHeader colHl2"><div class="sparkedLetterLogo"></div></div> <!--(8:3)-->
+                    <div class="compCell gridHeader colHl3"><div class="cubesLetterLogo"></div></div> <!--(8:3)-->
+                    <div class="compCell"></div>
+                    <div class="compCell justStart">Cost&nbsp;<p2>(Per Month)</p2></div>
+                    <div class="compCell colHl liTxt">$1</div>
+                    <div class="compCell colHl2">$1</div>
+                    <div class="compCell colHl3">$1.50</div>
+                    <div class="compCell"></div>
+                    <div class="compCell justStart rowHl">CPU</div>
+                    <div class="compCell colHl rowHl2 liTxt">400%</div>
+                    <div class="compCell colHl2 rowHl3">50%</div>
+                    <div class="compCell colHl3 rowHl4">15%</div>
+                    <div class="compCell rowHl"></div>
+                    <div class="compCell justStart">Storage</div>
+                    <div class="compCell colHl liTxt">7GB</div>
+                    <div class="compCell colHl2">5GB</div>
+                    <div class="compCell colHl3">8GB</div>
+                    <div class="compCell"></div>
+                    <div class="compCell justStart rowHl">Memory</div>
+                    <div class="compCell colHl rowHl2 liTxt">1GB</div>
+                    <div class="compCell colHl2 rowHl3">512Mb</div>
+                    <div class="compCell colHl3 rowHl4">512Mb</div>
+                    <div class="compCell rowHl"></div>
+                    <div class="compCell justStart">Network</div>
+                    <div class="compCell colHl liTxt">∞/1 gbps</div>
+                    <div class="compCell colHl2">N/A</div>
+                    <div class="compCell colHl3">N/A</div>
+                    <div class="compCell"></div>
+                </div>
+
+                <!--Compare Mobile-->
+                <div class="compScrollWrap">
+                    <div class="compScroll">
+                        <div class="lunesLetterLogo"></div>
+                        <div class="compData liTxt"> 
+                            <h4 class="liTxt">Cost (Per Month)</h4>
+                            <span>$1</span>
+                            <h4 class="liTxt">CPU</h4>
+                            <span>400%</span>
+                            <h4 class="liTxt">Storage</h4>
+                            <span>7GB</span>
+                            <h4 class="liTxt">Memory</h4>
+                            <span>1GB</span>
+                            <h4 class="liTxt">Network</h4>
+                            <span>∞/1 gbps</span>
+                        </div>
+                    </div>
+                    <div class="compScroll">
+                        <div class="sparkedLetterLogo"></div>
+                        <div class="compData"> 
+                            <h4>Cost (Per Month)</h4>
+                            <span>$1</span>
+                            <h4>CPU</h4>
+                            <span>50%</span>
+                            <h4>Storage</h4>
+                            <span>5GB</span>
+                            <h4>Memory</h4>
+                            <span>512Mb</span>
+                            <h4>Network</h4>
+                            <span>N/A</span>
+                        </div>
+                    </div>
+                    <div class="compScroll">
+                        <div class="cubesLetterLogo"></div>
+                        <div class="compData"> 
+                            <h4>Cost (Per Month)</h4>
+                            <span>$1.50</span>
+                            <h4>CPU</h4>
+                            <span>15%</span>
+                            <h4>Storage</h4>
+                            <span>8GB</span>
+                            <h4>Memory</h4>
+                            <span>512Mb</span>
+                            <h4>Network</h4>
+                            <span>N/A</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                
             <div class="space"></div>
 
+            <!-- Testimonials -->
+            <section id="reviews" class="reveal">
+                <!-- <h2>Testim<i class="fa-duotone fa-circle-star testimStar"></i>nials</h2> -->
+                <h2 class="testimHead">What Our Clients Say</h2>
+                <h3 class="testimSubHead"><i class="fa-solid fa-star testimStars"></i><i class="fa-solid fa-star testimStars"></i><i class="fa-solid fa-star testimStars"></i><i class="fa-solid fa-star testimStars"></i><i class="fa-solid fa-star testimStars"></i></h3>
+                
+                <div class="testimParent">
+                    <div class="testimChild">
+                        <div class="testimBlock">
+                            <div>
+                                <p2 class="testimReview">"I've been using Lunes Hosting for over a year now and I've never had any issues. The support is amazing and the prices are unbeatable."</p2>
+                            </div>
+                            <div class="testimUser">
+                                <span>Nate Pamela Clark</span>
+                            </div>
+                            <div class="moonSvg"></div>
+                        </div>
+                        <div class="testimBlock">
+                            <div>
+                                <p2 class="testimReview">"These losers suck.."</p2>
+                            </div>
+                            <div class="testimUser">
+                                <span>ChrizxzFTW</span>
+                            </div>
+                            <div class="moonSvg"></div>
+                        </div>
+                    </div>
+                    <div class="testimChild">
+                        <div class="testimBlock">
+                            <div>
+                                <p2 class="testimReview">"The support is terrible, and the servers are very poor quality. Do not use this if you want good hosting."</p2>
+                            </div>
+                            <div class="testimUser">
+                                <span>srnyx</span>
+                            </div>
+                            <div class="moonSvg"></div>
+                        </div>
+                        <div class="testimBlock block1">
+                            <div>
+                                <p2 class="testimReview">"Use https://myhostisbetter.gg today!"</p2>
+                            </div>
+                            <div class="testimUser">
+                                <span>Josh</span>
+                            </div>
+                            <div class="moonSvg"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+                
+
+            <div class="space" style="height: 150px;"></div>
 
         </div>
-        
 
+            <div class="skyBottom">
+                <!-- Separator -->
+                <div class="sep2">
+                    <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1924 210.09">
+                        <!-- <defs><style></style></defs> -->
+                        <g id="Layer_3">
+                            <path class="cls-1" d="M1924,165.46v44.63H0v-44.63C262.61,62,597.38,0,962,0s699.39,62,962,165.46Z"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="space"></div>
+                
+                <section id="closing">
+                    <div class="footMoonWrap">
+                        <div class="footMoon">
+                            <h2>Launch Your <br> Moon Mission</h2>
+                            <div class="bttnWrap">
+                                <a href="./pricing" class="bttn moonBttn" rel="noopener noreferrer">SEE PLANS</a>
+                                <a href="https://betadash.lunes.host" class="bttn moonBttn" rel="noopener noreferrer">GET STARTED</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="space"></div>
+            </div>
+
+            <div class="footGradient"></div>
+            <div class="footGradient2"></div>
+            
     </div>
-
+        
     <footer id="footer" class="footer">
-        <div class="footerDes">
-            <div class="footerLeft">
-                <div class="footerPages">
-                    <a href="#">Contact</a><br>
-                    <a href="#">T.O.S.</a><br>
-                    <a href="#">Privacy Policy</a>
+        <div class="footerWrap">
+            <div class="footerDes">
+                <div class="footerLeft">
+                    <div class="footerLogo">
+                        <a href="./." rel="noopener noreferrer">
+                            <img src="./assets/lunesLogo.png" class="footerImg" alt="Lunes"/> 
+                            <span class="footerTxt">Lunes Hosting</span>
+                        </a>
+                    </div>
+                    <div class="footerTxt2">
+                        <span>Follow Us</span>
+                    </div>
+                    <div class="footerSocials">
+                        <a href="https://discord.gg/Bf2FybbKjJ" rel="noopener noreferrer" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/LunesHost" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://github.com/Lunes-Hosting" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="lightDarkMode">
+                        Light/Dark Mode:<button id="l-d"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                    </div>
+                </div>
+                <div class="footerRight">
+                    <div class="footerPages">
+                        <a href="mailto:owner@lunes.host">Contact</a><br>
+                        <a href="./tos/">Terms</a><br>
+                        <a href="./privacy">Privacy</a>
+                    </div>
                 </div>
             </div>
-            <div class="footerRight">
-                <div class="footerLogo">
-                    <a href="./." rel="noopener noreferrer">
-                        <img src="./assets/lunesLogo.png" class="footerImg" alt="Lunes"/> 
-                        <span class="footerTxt">Lunes Hosting</span>
-                    </a>
+            <div class="footerUpMobile">
+                <div class="footerUp">
+                    <div class="footerLogo">
+                        <a href="./." rel="noopener noreferrer">
+                            <img src="./assets/lunesLogo.png" class="footerImg" alt="Lunes"/> 
+                            <span class="footerTxt">Lunes Hosting</span>
+                        </a>
+                    </div>
+                    <div class="footerPages">
+                        <a href="mailto:owner@lunes.host">Contact</a><br>
+                        <a href="./tos">Terms</a><br>
+                        <a href="./privacy">Privacy</a>
+                    </div>
                 </div>
-                <div class="footerTxt2">
-                    <span>Follow Us</span>
-                </div>
-                <div class="footerSocials">
-                    <a href="https://discord.gg/Bf2FybbKjJ" rel="noopener noreferrer" target="_blank"><i class="fab fa-discord"></i></a>
-                    <a href="https://twitter.com/LunesHost" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://github.com/Lunes-Hosting" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
+                <div class="footerDown">
+                    <div class="footerTxt2">
+                        <span>Follow Us</span>
+                    </div>
+                    <div class="footerSocials">
+                        <a href="https://discord.gg/Bf2FybbKjJ" rel="noopener noreferrer" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/LunesHost" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://github.com/Lunes-Hosting" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
                 <div class="lightDarkMode">
-                    Light/Dark Mode: <button id="l-d"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                    Light/Dark Mode:<button id="l-d"><i class="fa-solid fa-circle-half-stroke"></i></button>
                 </div>
             </div>
-        </div>
-        <div class="footerUpMobile">
-            <div class="footerUp">
-                <div class="footerLogo">
-                    <a href="./." rel="noopener noreferrer">
-                        <img src="./assets/lunesLogo.png" class="footerImg" alt="Lunes"/> 
-                        <span class="footerTxt">Lunes Hosting</span>
-                    </a>
-                </div>
-                <div class="footerPages">
-                    <a href="#">Contact</a><br>
-                    <a href="#">T.O.S.</a><br>
-                    <a href="#">Privacy Policy</a>
-                </div>
+            <div class="footerBottom">    
+                <div class="footerTxt3">@2023 Lunes Hosting, All Rights Reserved &nbsp;<s>--</s>&nbsp; Made with 💛 by&nbsp;<a href="https://chrizxz.com">ChrizxzFTW</a>.</div>
+                <div class="footerTxt3Mobile">@2023 Lunes Hosting, All Rights Reserved.<br>Made with 💛 by &nbsp;<a href="https://chrizxz.com">ChrizxzFTW</a>.</div>
             </div>
-            <div class="footerDown">
-                <div class="footerTxt2">
-                    <span>Follow Us</span>
-                </div>
-                <div class="footerSocials">
-                    <a href="https://discord.gg/Bf2FybbKjJ" rel="noopener noreferrer" target="_blank"><i class="fab fa-discord"></i></a>
-                    <a href="https://twitter.com/LunesHost" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://github.com/Lunes-Hosting" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-            <div class="lightDarkMode">
-                Light/Dark Mode: <button id="l-d"><i class="fa-solid fa-circle-half-stroke"></i></button>
-            </div>
-        </div>
-        <div class="footerBottom">    
-            <div class="footerTxt3">@2023 Lunes Hosting, All Rights Reserved.</div>
         </div>
     </footer>
 
-  </body>
+</body>
 </html>
