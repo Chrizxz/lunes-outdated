@@ -6,6 +6,7 @@
 
 .dropdown-content {
     display: none;
+    box-shadow: none;
 }
 
 nav {
@@ -26,6 +27,8 @@ nav {
     .dropbtnWrap {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        width: 100vw;
     }
 
     .dropbtn2 {
@@ -53,6 +56,7 @@ nav {
         width: 100vw !important;
         background: var(--modal); /* color */
         /* position: relative; */
+        box-shadow: 0 0 0rem 30rem rgba(0,0,0,0.5);
     }
 
     .dropdown-content a {
@@ -62,6 +66,21 @@ nav {
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+    }
+
+    .dropdown-content a button {
+        background-color: transparent;
+        border: none;
+        color: var(--subTxt);
+        font-family: 'Lato', sans-serif !important;
+        font-size: 16px;
+        font-weight: 400;
+        width: 100%;
+        height: 2rem;
+    }
+
+    .dropdown-content a:nth-child(4) {
+        padding: 6px 16px;
     }
 
     .dropdown-content .icons {
@@ -111,7 +130,7 @@ nav {
     .navTxt {
         font-size: 40%;
         padding-left: 5%;
-        color: var(--text1);
+        color: var(--text);
     }
 
     .mobileLogoWrap {
@@ -189,7 +208,7 @@ nav {
     .line {
         width: 20px;
         height: 3px;
-        background-color: var(--text1);
+        background-color: var(--text);
         margin: 2.5px 0;
         transition: 0.4s;
         border-radius: 1vw;
@@ -223,7 +242,7 @@ nav {
 
 .navTxt2 {
     font-size: 20px;
-    color: var(--navTxt1);
+    color: var(--navTxt);
 }
 
 .links {
@@ -250,6 +269,8 @@ nav div:first-child h1 {
 
 .separator {
     color: var(--navSubTxt);
+    margin-left: .5rem;
+    margin-right: .5rem;
 }
 
 ul {
@@ -280,13 +301,33 @@ nav ul li a {
     position: relative;
     color: var(--navSubTxt);
     text-decoration: none;
-    padding: .8rem 1rem;
+    margin: .8rem 1rem;
     display: block;
-    line-height: 1;
+    line-height: 1px;
     font-weight: 400 !important;
 }
 
 nav ul li a:hover {
+    color: var(--navTxtHover);
+}
+
+nav ul li button {
+    background-color: transparent;
+    border-radius: 100%;
+    padding: 0px;
+    border: none;
+    line-height: 1px;
+    cursor: pointer;
+    color: var(--navSubTxt);
+    font-size: 15px;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+
+}
+
+nav ul li button:hover {
     color: var(--navTxtHover);
 }
      
@@ -304,13 +345,13 @@ nav ul li a:hover {
     border-radius: 15px ;
     transform: translateX(1%);
     background: var(--modal); /* color */
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
     z-index: 50 !important;
     /* backdrop-filter: blur(15px); */
 }
 
 .fixed .navTxt2 {
-    color: var(--text1);
+    color: var(--text);
 }
 
 .fixed ul li a {
@@ -321,8 +362,16 @@ nav ul li a:hover {
     color: var(--textHover);
 }
 
+.fixed ul li button {
+    color: var(--subTxt) ;
+}
+
+.fixed ul li button:hover {
+    color: var(--textHover);
+}
+
 .fixed .separator {
-    color: var(--text1);
+    color: var(--text);
 }
 
 @keyframes slideDown {
