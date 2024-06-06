@@ -1,0 +1,163 @@
+@import url(colors.css);
+
+/* Desktop Viewports */
+
+.pgMoonWrap {
+    display:flex;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.pgMoon {
+    margin-top: 2rem;
+    background: url(../assets/lunesMoonOutline.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30rem;
+    height: 30rem;
+    opacity: .3;
+    z-index: -3;
+}
+
+.space {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+.space2 {
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+}
+
+.spaceTop {
+    height: 60px !important;
+}
+
+.gradTxt {
+    background: radial-gradient(var(--moonLight) 0%, var(--moon2) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.comeUp {
+    animation: comeUp .2s ease-in-out forwards;
+    animation-delay: .2s;
+    opacity: 0;
+}
+
+.comeUpLag {
+    animation-delay: .4s !important;
+}
+
+@keyframes comeUp {
+    from {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.legalParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.legalChild {
+    display: flex;
+    flex-direction: column;
+    /* align-items: left; */
+    justify-content: center;
+    width: 90%;
+}
+
+.yello {
+    color: var(--moon);
+}
+
+h2, h3, h4, h5 {
+    text-align: left !important;
+}
+
+h3 {
+    margin-bottom: 1rem !important;
+}
+
+p1 {
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+p2 {
+    text-align: left !important;
+    margin: 0 !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    margin-bottom: 2rem !important;
+}
+
+p2 > ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.legalTOCWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+}
+
+.legalTOC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.legalTOC:first-child {
+    margin-right: 2rem;
+}
+
+.tocBttn {
+    width: 100%;
+    padding: .3rem;
+    transition: 0.1s;
+}
+
+.tocBttn:hover {
+    background-color: var(--greyMoon);
+    color: var(--section);
+}
+
+/* Mobile Viewports */
+
+@media screen and (max-width: 1030px) {
+    .pgMoon {
+        margin-top: 5rem;
+    }
+
+    .spaceTop {
+        height: 100px !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .pgMoon {
+        margin-top: 10rem;
+        width: 20rem;
+        height: 20rem;
+    }
+}
