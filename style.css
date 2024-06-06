@@ -1,147 +1,241 @@
 @import url(./css/colors.css);
 
 body {
-    background-color: var(--bg);
-    font-family: 'Roboto', sans-serif; 
-    font-weight: 700;
-    color: var(--text1);
-    line-height: 20px;
-    margin: 0;
-    position: relative;
-    height: 100%;
-    padding: 0;
-    overflow-x: hidden;
+  background-color: var(--bg2);
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 700;
+  color: var(--text);
+  line-height: 20px;
+  margin: 0;
+  position: relative;
+  height: 100%;
+  padding: 0;
+  overflow-x: hidden;
 }
   
-  .container {
-    min-height: 100vh;
-  }
-  
-  h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 52px;
-    font-style: normal;
-    color: var(--text1);
-    margin-top: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+.container {
+  min-height: 100vh;
+  max-width: 2600px;
+  margin: 0 auto;
+}
 
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  font-style: normal;
+  color: var(--text);
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 50px;
+  font-style: normal;
+  color: var(--text);
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 32px;
+  font-style: normal;
+  color: var(--text);
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  color: var(--text);
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+h5 {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+  color: var(--text);
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+p1 {
+  font-family: 'Urbanist', sans-serif;
+  text-align: center;
+  display: block;
+  color: var(--subTxt);
+  font-weight: 400;
+  font-size: 18px;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 0em;
+  margin-bottom: 3em;
+}
+
+p2 {
+  font-family: 'Urbanist', sans-serif;
+  text-align: center;
+  display: block;
+  color: var(--subTxt);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color .2s ease-in-out;
+}
+
+a:hover {
+  color: var(--textHover);
+}
+
+.last {
+  padding-bottom: 6em !important;
+  text-align: center;
+}
+
+::selection {
+  background: var(--moon);
+  color: var(--textSelect);
+}
+
+.bttnWrap {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.bttn {
+  text-align: center;
+  border-radius: 5rem;
+  border: .3rem solid;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+  margin-left: .3rem;
+  margin-right: .5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.2s ease-out, transform 0.3s ease-out;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.normBttn {
+  color: #333333;
+  background-color: white;
+  box-shadow: 0 8px #747473;
+}
+
+.normBttn:hover {
+  color: #333333;
+  transform: translateY(-0.15em);
+  background-color: white;
+}
+
+.reveal {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: .4s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
   h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 52px;
-    font-style: normal;
-    line-height: 50px;
-    color: var(--text1);
-    margin-top: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  h3 {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 600;
     font-size: 32px;
-    font-style: normal;
-    color: var(--text1);
-    margin-top: 20px;
-    text-align: center;
-    margin-bottom: 10px;
+    line-height: 30px;
   }
-  
+
+  h3 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   h4 {
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    font-style: normal;
-    color: var(--text1);
-    margin-top: 0px;
-    text-align: center;
-    margin-bottom: 5px;
+    font-size: 16px;
   }
 
-  p1 {
-    font-family: 'Urbanist', sans-serif;
-    text-align: center;
-    display: block;
-    color: var(--subTxt);
-    font-weight: 400;
-    font-size: 20px;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-top: 0em;
-    margin-bottom: 3em;
+  .bttnWrap {
+    flex-direction: column;
+    align-items: center;
   }
 
-  p2 {
-    font-family: 'Urbanist', sans-serif;
-    text-align: center;
-    display: block;
-    color: var(--subTxt);
-    font-weight: 400;
-    font-size: 18px;
+  .bttn {
+    border: .15rem solid;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+    width: 50%;
+    margin-left: .3rem;
+    margin-right: .3rem;
+    font-size: .65rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    padding-left: 0;
+    padding-right: 0;
   }
-  
-  a {
-    color: var(--text1);
-    text-decoration: none;
-    transition: color .2s ease-in-out;
-  }
-  
-  a:hover {
-    color: var(--textHover);
-  }
-  
-  .last {
-    padding-bottom: 6em !important;
-    text-align: center;
-  }
-  
-  ::selection {
-    background: var(--moon1);
-    color: var(--textSelect);
-  }
+}
 
-  @media only screen and (max-width: 700px) {
-    h2 {
-      font-size: 32px;
-      line-height: 20px;
-    }
-    h3 {
-      font-size: 18px;
-    }
-    h4 {
-      font-size: 16px;
-    }
-  }
+html {
+  scroll-behavior: smooth;
+}
 
+/* body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBg) var(--scrollbarBg);
+} */
+
+@supports (scrollbar-width: thin) {
   html {
-    --thumbBG: var(--scrollBar);
-    --scrollbarBG: var(--scrollBg);
-    scroll-behavior: smooth;
+    scrollbar-color: var(--thumbBg) var(--scrollbarBg);
   }
+}
 
-  body::-webkit-scrollbar {
-    width: .8vw;
-  }
+/* body::-webkit-scrollbar {
+  width: .8vw;
+} */
 
-  body {
-    scrollbar-width: thin;
-    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: var(--scrollbarBG);
-  }
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBg);
+}
 
-  body::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG) ;
-    border-radius: .6vw;
-    border: .2vw solid var(--scrollbarBG);
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--scrollHover); 
-  }
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBg) ;
+  border-radius: .6vw;
+  border: .2vw solid var(--scrollbarBg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollHover); 
+}
